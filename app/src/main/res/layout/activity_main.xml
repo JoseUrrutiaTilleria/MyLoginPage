@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_background"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="150dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -22,35 +22,54 @@
         android:id="@+id/userLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:hint="Ingresar usuario"
         android:inputType="text"
+        android:padding="20dp"
         app:layout_constraintTop_toBottomOf="@+id/imgLogo"
-        app:layout_constraintBottom_toTopOf="@+id/userPassword">
+        >
     </androidx.appcompat.widget.AppCompatEditText>
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/userPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:hint="Ingresar password"
         android:inputType="textPassword"
         android:maxLength="4"
-        app:layout_constraintBottom_toTopOf="@+id/btn"
+        android:padding="20dp"
         app:layout_constraintTop_toBottomOf="@+id/userLogin">
     </androidx.appcompat.widget.AppCompatEditText>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn"
-        android:layout_width="0dp"
+        android:id="@+id/btnRegistrese"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:background="@color/design_default_color_primary"
-        android:text="Ingresar"
+        android:text="Registrase"
         android:textColor="@color/white"
-        android:textSize="23dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20dp"
+        android:onClick="initRegistroDeUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userPassword">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIngresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/design_default_color_primary"
+        android:text="Ingresar"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:onClick="initHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrese">
     </androidx.appcompat.widget.AppCompatButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

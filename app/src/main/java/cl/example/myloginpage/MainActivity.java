@@ -1,6 +1,8 @@
 package cl.example.myloginpage;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,12 +22,20 @@ public class MainActivity extends AppCompatActivity {
                 .load ("http://blog.desafiolatam.com/wp-content/uploads/2015/03/desafio-latam-logonegro.png")
                 .into(ImgLogo);
 
-        Button btnIngresar = findViewById(R.id.btn);
-        btnIngresar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Usuario ingresado con exito", LENGTH_SHORT).show();
-            }
-        });
+        //Button btnRegistrese = findViewById(R.id.btnRegistrese);
+        //Button btnIngresar = findViewById(R.id.btnIngresar);
+
     }
+
+    public void initRegistroDeUsuario(View view) {
+        Intent intent = new Intent( this , RegistroDeUsuario.class);
+        startActivity(intent);
+    }
+
+    public void initHome(View view) {
+        Intent intent = new Intent( this , HomeActivity.class);
+        startActivity(intent);
+    }
+
 
 }
